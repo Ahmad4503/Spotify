@@ -1,0 +1,393 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; /* Ensure that the main container itself doesn't overflow */
+    padding: 0.5rem;
+}
+
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto; /* Enable scrolling within the main-content div */
+    height: calc(100vh - 72px); /* Adjust the height to ensure it doesn't overflow the viewport */
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    /* height: 120px; */
+    /* top: 7px; */
+}
+/* Sidebar  */
+
+.sidebar {
+    width: 340px;
+    background-color: black;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 1rem;
+}
+
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.5;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+    
+}
+
+
+.nav-option a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin-left: 1rem;
+    /* padding: 0.25rem 0.75rem; */
+    
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options a{
+    text-decoration: none;
+    color: white;
+}
+
+.lab-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-right: 1.5rem;
+}
+.icons i:hover  {
+    opacity: 1;
+   
+}
+
+.box {
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9rem;
+}
+
+.badge {
+    background-color: white;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.25rem 1.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+/* Main Section */
+
+.sticky-nav {
+    height: 64px;
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.sticky-back-fwd {
+    margin-left: 0.5rem;
+    
+}
+
+.sticky-back-fwd button {
+    font-size: 1.4rem;
+    background-color: #000;
+    color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    margin: 10px;
+}
+.sticky-back-fwd button:hover {
+   
+    opacity: 1;
+}
+
+
+.badge {
+    padding: 4px 16px;
+    margin: 0 10px;
+    font-size: 1rem;
+
+}
+
+.badge2 {
+    background-color: #121212;
+    color: white;
+    opacity: 0.98;
+}
+.sticky-nav-options {
+    padding: 0.24rem 1rem 0.25rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sticky-nav-options i {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    opacity: 0.75;
+    
+}
+
+.sticky-nav-options i:hover {
+    opacity: 1;
+    font-size: 1.4rem;
+}
+
+.badge:hover {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+/* Cards */
+
+.card {
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+
+}
+
+.card-title  {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+/* Music Player */
+
+.music-player {
+    display: flex;
+    position: relative;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.album {
+    width: 25%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    color: #ddd;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player {
+    width: 50%;
+    
+}
+
+.player-control-icons {
+    height: 1rem;
+    margin-right: 1rem;
+    opacity: 0.75;
+}
+.player-control-icons:hover {
+    opacity: 1;
+}
+
+.player-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playback-bar {
+    display: flex;
+    /* bottom: 1px; */
+    /* position: relative; */
+    /* bottom: 0px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 72%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.controls {
+    width: 25%;
+    
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #1bd701;
+    margin-top: -6px;
+}
+
+/* Album */
+
+.album img {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+}
+
+.album-icon {
+    padding: 8px;
+    width: 28px;
+    height: 32px;
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+
+.album-icon:hover {
+    opacity: 1;
+    transition: 0.33s;
+    border-left: 2px solid white;
+}
+
+.album-heading {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.album-p {
+    font-size: 0.84rem;
+}
+
+/* Controls */
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.controls i{
+    opacity: 0.75;
+    font-size: 1rem;
+}
+
+.controls i:hover {
+    opacity: 1;
+    transition: 0.33s;
+}
+
+.control-progress {
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+
+.control-progress::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.control-progress::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #1bd701;
+    margin-top: -6px;
+}
